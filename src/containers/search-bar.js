@@ -5,6 +5,10 @@ class SearchBar extends Component {
     term: '',
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   onInputChange = (e) => {
     const term = e.target.value;
     this.setState(() => ({ term }));
@@ -12,7 +16,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <form className="form">
+      <form onSubmit={this.handleSubmit} className="form">
         <input
           onChange={this.onInputChange}
           className="input-search"
