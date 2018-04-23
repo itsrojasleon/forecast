@@ -1,4 +1,5 @@
 import 'whatwg-fetch';
+
 const API_KEY = 'b6907d289e10d714a6e88b30761fae22';
 const BASE_URL = `http://samples.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
@@ -10,5 +11,5 @@ export const fetchWeather = async (city) => {
   return {
     type: FETCH_WEATHER,
     payload: request,
-  },
+  };
 };
